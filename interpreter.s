@@ -1885,15 +1885,13 @@ StopCommand.evaluateCommand:
 	addiu	$sp $sp 20
 	jr	$ra	
 DisplayCommand.evaluateCommand:
-	addiu	$sp $sp -16
-	sw	$fp 16($sp)
-	sw	$s0 12($sp)
-	sw	$ra 8($sp)
+	addiu	$sp $sp -12
+	sw	$fp 12($sp)
+	sw	$s0 8($sp)
+	sw	$ra 4($sp)
 	addiu	$fp $sp 4
 	move	$s0 $a0
-	lw	$s1 20($fp)
-	lw	$a0 20($fp)
-	sw	$s1 0($fp)
+	lw	$a0 16($fp)
 	bne	$a0 $zero label106
 	la	$a0 str_const1
 	li	$t1 1
@@ -1902,11 +1900,10 @@ label106:
 	lw	$t1 8($a0)
 	lw	$t1 48($t1)
 	jalr		$t1
-	lw	$s1 0($fp)
-	lw	$fp 16($sp)
-	lw	$s0 12($sp)
-	lw	$ra 8($sp)
-	addiu	$sp $sp 24
+	lw	$fp 12($sp)
+	lw	$s0 8($sp)
+	lw	$ra 4($sp)
+	addiu	$sp $sp 20
 	jr	$ra	
 PushCommand.evaluateCommand:
 	addiu	$sp $sp -12

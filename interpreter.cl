@@ -1,7 +1,10 @@
 (*
-Program to simulate and interpret a Stack Machine
-Sukrut Rao
-CS15BTECH11036
+    Program to simulate and interpret a Stack Machine
+    Sukrut Rao
+    CS15BTECH11036
+
+    Classes Stack and NonEmptyStack are based on the List and Cons classes from
+    the examples. Functions atoi, itoa, etc. are also based on the examples.
 *)
 
 (*
@@ -350,7 +353,7 @@ class DisplayCommand inherits StackCommand {
         return value : the current stack
     *)
     evaluateCommand(stack : Stack, input : String) : Stack {
-            stack.display();
+            stack.display()
     };
 };
 
