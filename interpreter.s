@@ -1903,7 +1903,6 @@ label106:
 	lw	$t1 48($t1)
 	jalr		$t1
 	lw	$s1 0($fp)
-	move	$a0 $s1
 	lw	$fp 16($sp)
 	lw	$s0 12($sp)
 	lw	$ra 8($sp)
@@ -2198,6 +2197,7 @@ label121:
 	lw	$t1 8($a0)
 	lw	$t1 48($t1)
 	jalr		$t1
+	move	$a0 $s0
 	lw	$fp 16($sp)
 	lw	$s0 12($sp)
 	lw	$ra 8($sp)
